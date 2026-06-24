@@ -1,3 +1,6 @@
 {
-  "name": "dr-dipti-mathias-portfolio"
+  "name": "dr-dipti-mathias-portfolio",
+  "rewrites": [
+    { "source": "/login-analytics/(.*)", "destination": "/login-analytics/index.html" }
+  ]
 }
