@@ -1,0 +1,49 @@
+name: Update Analytics Dashboard
+
+on:
+  schedule:
+    - cron: '0 */12 * * *' # every 12 hours
+  workflow_dispatch: # manual trigger from GitHub UI
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout portfolio
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT }}
+
+      - name: Checkout SEO analytics repo
+        uses: actions/checkout@v4
+        with:
+          repository: sohamghadge/dr-dipti-seo-analytics
+          path: seo-analytics
+          token: ${{ secrets.PAT }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install SEO analytics deps
+        run: cd seo-analytics && npm ci
+
+      - name: Fetch GA4 data and update mock-data.ts
+        env:
+          GA4_PRIVATE_KEY: ${{ secrets.GA4_PRIVATE_KEY }}
+        run: cd seo-analytics && node scripts/update-mock-data.mjs
+
+      - name: Build dashboard
+        run: cd seo-analytics && npm run build
+
+      - name: Copy build to portfolio
+        run: |
+          rm -rf login-analytics
+          cp -r seo-analytics/dist login-analytics
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add login-analytics/
+          git diff --staged --quiet || (git commit -m "Auto-update analytics dashboard $(date -u +%Y-%m-%d)" && git push)
