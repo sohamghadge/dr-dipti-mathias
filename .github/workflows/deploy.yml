@@ -18,4 +18,4 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /home/ubuntu/dr-dipti-mathias
-            git pull
+            sudo git pull
