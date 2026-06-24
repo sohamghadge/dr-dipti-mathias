@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dr. Dipti Mathias</title>
+<script>
+if(window.location.pathname.startsWith('/login-analytics')&&!window.location.pathname.endsWith('.html')){
+  window.location.replace('/login-analytics/index.html'+window.location.hash);
+}
+</script>
 <script src="./support.js"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKSKRJ07QH"></script>
