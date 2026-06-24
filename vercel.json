@@ -1,8 +1,3 @@
 {
-  "name": "dr-dipti-mathias-portfolio",
-  "rewrites": [
-    { "source": "/login-analytics", "destination": "/login-analytics/index.html" },
-    { "source": "/login-analytics/", "destination": "/login-analytics/index.html" },
-    { "source": "/login-analytics/(.*)", "destination": "/login-analytics/index.html" }
-  ]
+  "name": "dr-dipti-mathias-portfolio"
 }
