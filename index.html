@@ -405,13 +405,37 @@ if(window.location.pathname.startsWith('/login-analytics')&&!window.location.pat
         <div data-reveal style="margin-top:clamp(56px,7vw,90px);">
           <span style="display:block; font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(35,46,33,0.45); margin-bottom:8px;">Curriculum &middot; Vitae</span>
 
-          <sc-for list="{{ timeline }}" as="row" hint-placeholder-count="6">
-            <div style="display:flex; gap:clamp(20px,4vw,56px); align-items:baseline; flex-wrap:wrap; padding:22px 0; border-top:1px solid rgba(35,46,33,0.15);">
-              <span style="flex:0 0 116px; font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.12em; color:rgba(35,46,33,0.5);">{{ row.years }}</span>
-              <span style="flex:1 1 240px; font-family:'Cormorant Garamond', Georgia, serif; font-size:clamp(20px,2vw,26px); font-weight:400; letter-spacing:-0.01em;">{{ row.role }}</span>
-              <span style="flex:1 1 200px; font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.08em; color:rgba(35,46,33,0.45); line-height:1.5;">{{ row.place }}</span>
-            </div>
-          </sc-for>
+          <!-- Curriculum Vitae Statically Rendered for SEO crawlability -->
+          <div style="display:flex; gap:clamp(20px,4vw,56px); align-items:baseline; flex-wrap:wrap; padding:22px 0; border-top:1px solid rgba(35,46,33,0.15);">
+            <span style="flex:0 0 116px; font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.12em; color:rgba(35,46,33,0.5);">2011 — 2017</span>
+            <span style="flex:1 1 240px; font-family:'Cormorant Garamond', Georgia, serif; font-size:clamp(20px,2vw,26px); font-weight:400; letter-spacing:-0.01em;">MBBS</span>
+            <span style="flex:1 1 200px; font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.08em; color:rgba(35,46,33,0.45); line-height:1.5;">Fr. Muller Medical College, Rajiv Gandhi University</span>
+          </div>
+          <div style="display:flex; gap:clamp(20px,4vw,56px); align-items:baseline; flex-wrap:wrap; padding:22px 0; border-top:1px solid rgba(35,46,33,0.15);">
+            <span style="flex:0 0 116px; font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.12em; color:rgba(35,46,33,0.5);">2018 — 2021</span>
+            <span style="flex:1 1 240px; font-family:'Cormorant Garamond', Georgia, serif; font-size:clamp(20px,2vw,26px); font-weight:400; letter-spacing:-0.01em;">MD, Dermatology, Venereology &amp; Leprosy</span>
+            <span style="flex:1 1 200px; font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.08em; color:rgba(35,46,33,0.45); line-height:1.5;">Dr. D.Y. Patil Medical College, Pune</span>
+          </div>
+          <div style="display:flex; gap:clamp(20px,4vw,56px); align-items:baseline; flex-wrap:wrap; padding:22px 0; border-top:1px solid rgba(35,46,33,0.15);">
+            <span style="flex:0 0 116px; font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.12em; color:rgba(35,46,33,0.5);">2021 — 2022</span>
+            <span style="flex:1 1 240px; font-family:'Cormorant Garamond', Georgia, serif; font-size:clamp(20px,2vw,26px); font-weight:400; letter-spacing:-0.01em;">Consultant Dermatologist</span>
+            <span style="flex:1 1 200px; font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.08em; color:rgba(35,46,33,0.45); line-height:1.5;">Kaya Limited</span>
+          </div>
+          <div style="display:flex; gap:clamp(20px,4vw,56px); align-items:baseline; flex-wrap:wrap; padding:22px 0; border-top:1px solid rgba(35,46,33,0.15);">
+            <span style="flex:0 0 116px; font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.12em; color:rgba(35,46,33,0.5);">2022 — 2023</span>
+            <span style="flex:1 1 240px; font-family:'Cormorant Garamond', Georgia, serif; font-size:clamp(20px,2vw,26px); font-weight:400; letter-spacing:-0.01em;">Lead Dermatologist</span>
+            <span style="flex:1 1 200px; font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.08em; color:rgba(35,46,33,0.45); line-height:1.5;">MakeOskin</span>
+          </div>
+          <div style="display:flex; gap:clamp(20px,4vw,56px); align-items:baseline; flex-wrap:wrap; padding:22px 0; border-top:1px solid rgba(35,46,33,0.15);">
+            <span style="flex:0 0 116px; font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.12em; color:rgba(35,46,33,0.5);">2023 — 2024</span>
+            <span style="flex:1 1 240px; font-family:'Cormorant Garamond', Georgia, serif; font-size:clamp(20px,2vw,26px); font-weight:400; letter-spacing:-0.01em;">Consulting Sr. Aesthetic Dermatologist</span>
+            <span style="flex:1 1 200px; font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.08em; color:rgba(35,46,33,0.45); line-height:1.5;">The Eterne Clinic, Powai</span>
+          </div>
+          <div style="display:flex; gap:clamp(20px,4vw,56px); align-items:baseline; flex-wrap:wrap; padding:22px 0; border-top:1px solid rgba(35,46,33,0.15);">
+            <span style="flex:0 0 116px; font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.12em; color:rgba(35,46,33,0.5);">2024 — Now</span>
+            <span style="flex:1 1 240px; font-family:'Cormorant Garamond', Georgia, serif; font-size:clamp(20px,2vw,26px); font-weight:400; letter-spacing:-0.01em;">Founder &amp; Head Dermatologist</span>
+            <span style="flex:1 1 200px; font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.08em; color:rgba(35,46,33,0.45); line-height:1.5;">Good Genes Dermatology, Khar West</span>
+          </div>
           <div style="border-top:1px solid rgba(35,46,33,0.15);"></div>
         </div>
       </div>
@@ -470,21 +494,48 @@ if(window.location.pathname.startsWith('/login-analytics')&&!window.location.pat
     </div>
 
     <div data-reveal>
-      <sc-for list="{{ modalities }}" as="m" hint-placeholder-count="3">
-        <div onClick="{{ m.onClick }}" style="border-top:1px solid rgba(35,46,33,0.15); padding:clamp(28px,3.5vw,46px) 0; cursor:pointer;">
-          <div style="display:flex; align-items:baseline; gap:clamp(20px,4vw,52px);">
-            <span style="font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.16em; color:rgba(35,46,33,0.45); flex:0 0 auto; padding-top:6px;">{{ m.numeral }}</span>
-            <h3 style="margin:0; flex:1 1 auto; font-family:'Cormorant Garamond', Georgia, serif; font-weight:300; font-size:clamp(28px,4vw,54px); line-height:1.05; letter-spacing:-0.015em;">{{ m.title }}</h3>
-            <span style="position:relative; flex:0 0 16px; width:16px; height:16px; align-self:center;">
-              <span style="position:absolute; top:50%; left:0; width:16px; height:1px; background:#232E21; transform:translateY(-50%);"></span>
-              <span data-vbar="{{ $index }}" style="position:absolute; left:50%; top:0; width:1px; height:16px; background:#232E21; transform:translateX(-50%) scaleY(1); transition:transform .5s cubic-bezier(.2,.7,.2,1);"></span>
-            </span>
-          </div>
-          <div data-mbody="{{ $index }}" style="overflow:hidden; max-height:0px; opacity:0; margin-top:0px; transition:max-height .7s cubic-bezier(.2,.7,.2,1), opacity .6s ease, margin-top .6s ease;">
-            <p style="margin:0; max-width:60ch; padding-left:clamp(0px,calc(12px + 4vw),104px); font-size:clamp(17px,1.3vw,21px); line-height:1.65; color:rgba(35,46,33,0.66); font-style:italic; font-family:'Cormorant Garamond', Georgia, serif;">{{ m.summary }}</p>
-          </div>
+      <!-- Modalities Statically Rendered for SEO crawlability -->
+      <div onclick="toggleModality(0)" style="border-top:1px solid rgba(35,46,33,0.15); padding:clamp(28px,3.5vw,46px) 0; cursor:pointer;">
+        <div style="display:flex; align-items:baseline; gap:clamp(20px,4vw,52px);">
+          <span style="font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.16em; color:rgba(35,46,33,0.45); flex:0 0 auto; padding-top:6px;">I.</span>
+          <h3 style="margin:0; flex:1 1 auto; font-family:'Cormorant Garamond', Georgia, serif; font-weight:300; font-size:clamp(28px,4vw,54px); line-height:1.05; letter-spacing:-0.015em;">Facial Architecture &amp; Contour</h3>
+          <span style="position:relative; flex:0 0 16px; width:16px; height:16px; align-self:center;">
+            <span style="position:absolute; top:50%; left:0; width:16px; height:1px; background:#232E21; transform:translateY(-50%);"></span>
+            <span data-vbar="0" style="position:absolute; left:50%; top:0; width:1px; height:16px; background:#232E21; transform:translateX(-50%) scaleY(1); transition:transform .5s cubic-bezier(.2,.7,.2,1);"></span>
+          </span>
         </div>
-      </sc-for>
+        <div data-mbody="0" style="overflow:hidden; max-height:0px; opacity:0; margin-top:0px; transition:max-height .7s cubic-bezier(.2,.7,.2,1), opacity .6s ease, margin-top .6s ease;">
+          <p style="margin:0; max-width:60ch; padding-left:clamp(0px,calc(12px + 4vw),104px); font-size:clamp(17px,1.3vw,21px); line-height:1.65; color:rgba(35,46,33,0.66); font-style:italic; font-family:'Cormorant Garamond', Georgia, serif;">Advanced structural lifting, volume restoration, and bespoke injectables — engineered to the individual architecture of the face. Phi-ratio precision over passing fashion.</p>
+        </div>
+      </div>
+
+      <div onclick="toggleModality(1)" style="border-top:1px solid rgba(35,46,33,0.15); padding:clamp(28px,3.5vw,46px) 0; cursor:pointer;">
+        <div style="display:flex; align-items:baseline; gap:clamp(20px,4vw,52px);">
+          <span style="font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.16em; color:rgba(35,46,33,0.45); flex:0 0 auto; padding-top:6px;">II.</span>
+          <h3 style="margin:0; flex:1 1 auto; font-family:'Cormorant Garamond', Georgia, serif; font-weight:300; font-size:clamp(28px,4vw,54px); line-height:1.05; letter-spacing:-0.015em;">Cellular Longevity &amp; Regeneration</h3>
+          <span style="position:relative; flex:0 0 16px; width:16px; height:16px; align-self:center;">
+            <span style="position:absolute; top:50%; left:0; width:16px; height:1px; background:#232E21; transform:translateY(-50%);"></span>
+            <span data-vbar="1" style="position:absolute; left:50%; top:0; width:1px; height:16px; background:#232E21; transform:translateX(-50%) scaleY(1); transition:transform .5s cubic-bezier(.2,.7,.2,1);"></span>
+          </span>
+        </div>
+        <div data-mbody="1" style="overflow:hidden; max-height:0px; opacity:0; margin-top:0px; transition:max-height .7s cubic-bezier(.2,.7,.2,1), opacity .6s ease, margin-top .6s ease;">
+          <p style="margin:0; max-width:60ch; padding-left:clamp(0px,calc(12px + 4vw),104px); font-size:clamp(17px,1.3vw,21px); line-height:1.65; color:rgba(35,46,33,0.66); font-style:italic; font-family:'Cormorant Garamond', Georgia, serif;">Advanced skin-quality restoration, medical skin boosters, and US-FDA approved laser therapies — regeneration measured at the cellular layer, over years, not weeks.</p>
+        </div>
+      </div>
+
+      <div onclick="toggleModality(2)" style="border-top:1px solid rgba(35,46,33,0.15); padding:clamp(28px,3.5vw,46px) 0; cursor:pointer;">
+        <div style="display:flex; align-items:baseline; gap:clamp(20px,4vw,52px);">
+          <span style="font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.16em; color:rgba(35,46,33,0.45); flex:0 0 auto; padding-top:6px;">III.</span>
+          <h3 style="margin:0; flex:1 1 auto; font-family:'Cormorant Garamond', Georgia, serif; font-weight:300; font-size:clamp(28px,4vw,54px); line-height:1.05; letter-spacing:-0.015em;">Trichology &amp; Scalp Science</h3>
+          <span style="position:relative; flex:0 0 16px; width:16px; height:16px; align-self:center;">
+            <span style="position:absolute; top:50%; left:0; width:16px; height:1px; background:#232E21; transform:translateY(-50%);"></span>
+            <span data-vbar="2" style="position:absolute; left:50%; top:0; width:1px; height:16px; background:#232E21; transform:translateX(-50%) scaleY(1); transition:transform .5s cubic-bezier(.2,.7,.2,1);"></span>
+          </span>
+        </div>
+        <div data-mbody="2" style="overflow:hidden; max-height:0px; opacity:0; margin-top:0px; transition:max-height .7s cubic-bezier(.2,.7,.2,1), opacity .6s ease, margin-top .6s ease;">
+          <p style="margin:0; max-width:60ch; padding-left:clamp(0px,calc(12px + 4vw),104px); font-size:clamp(17px,1.3vw,21px); line-height:1.65; color:rgba(35,46,33,0.66); font-style:italic; font-family:'Cormorant Garamond', Georgia, serif;">Rigorous, science-backed medical hair restoration and advanced scalp therapies — trichology held to the same exacting standard as the face.</p>
+        </div>
+      </div>
       <div style="border-top:1px solid rgba(35,46,33,0.15);"></div>
     </div>
   </section>
@@ -1047,6 +1098,23 @@ class Component extends DCLogic {
       notSubmitted: !this.state.submitted,
     };
   }
+}
+</script>
+<script>
+function toggleModality(index) {
+  const bodies = document.querySelectorAll('[data-mbody]');
+  const vbars = document.querySelectorAll('[data-vbar]');
+  
+  bodies.forEach((b, i) => {
+    const open = i === index && b.style.maxHeight !== '340px';
+    b.style.maxHeight = open ? '340px' : '0px';
+    b.style.opacity = open ? '1' : '0';
+    b.style.marginTop = open ? '28px' : '0px';
+  });
+  vbars.forEach((v, i) => {
+    const open = i === index && bodies[i].style.maxHeight === '340px';
+    v.style.transform = 'translateX(-50%) ' + (open ? 'scaleY(0)' : 'scaleY(1)');
+  });
 }
 </script>
 </body>
